@@ -1,0 +1,59 @@
+= Studynote
+
+This is a small template so create studynotes.
+You have to write in asciidoc and will get a nice formatted PDF.
+
+But there are some things to do first:
+
+```
+npm i -g @asciidoctor/core asciidoctor-pdf
+```
+
+Check the version:
+
+```
+asciidoctor-pdf --version
+```
+
+Its important that it shows *asciidoctor-web-pdf*:
+
+```
+Asciidoctor Web PDF 1.0.0-alpha.9 using Asciidoctor.js 2.2.0 (Asciidoctor 2.0.10) [https://asciidoctor.org]
+Runtime Environment (node v12.18.2 on darwin)
+CLI version 3.4.0
+```
+
+To use this template as custom layout, create a file next to the studynote-repo like example.adoc:
+
+```
+= Example Document
+Vitus Forsmann
+:github: https://www.github.com/VForsmann/
+:studiengang: IT
+:hochschule: MIT
+:semester: 8
+:hochschul_logo: logo.svg
+:imagesdir: images
+
+:ebene1: This is the main-heading for Page 1
+:ebene2: This is the secondary-heading for Page 1
+:ebene3: This ist the third-heading for Page 1
+== NewPage
+
+You have to set ebene1, ebene2 and ebene3 infront of every new page!
+
+=== This is a designed Block
+
+All content here is inside that Block.
+
+Right now you have to care manually about pages, there is not automatic creation of new pages when the content overflows.
+
+All other stuff works like normal asciidoc.
+
+```
+
+Then run asciidoctor-pdf like this:
+
+```
+asciidoctor-pdf ./example.adoc --template-require ./studynote/template.js
+```

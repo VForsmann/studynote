@@ -1,0 +1,101 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap';
+
+@page {
+  size: 297mm 210mm;
+}
+
+body {
+  font-family: 'Source Sans Pro', serif;
+}
+
+.cover_logo {
+  padding-top: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+#cover > h1:first-of-type {
+  padding-top: 5%;
+}
+
+#cover h1, h2 {
+  text-align: center;
+}
+
+.chapter {
+  page-break-before: always;
+  max-height: 210mm;
+  max-width: 297mm;
+}
+
+.content {
+  font-size: 0.8em;
+  margin: 10mm;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.inner_content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 190mm;
+}
+
+.inner_content p {
+  flex-grow: 0;
+  margin-left: 3mm;
+  margin-right: 3mm;
+}
+
+.inner_content p {
+  margin: 5px;
+}
+
+.themenblock {
+  width: 45%;
+  border: 2px solid lightslategray;
+  border-radius: 13px;
+  padding: 10px;
+  margin: 3mm;
+}
+
+.themenblock h3 {
+  margin-top: 0;
+}
+
+.section_outer_header {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgray;
+}
+
+.section_logo {
+  width: 25%;
+}
+
+.section_header {
+  
+}
+
+.ebene1{
+ font-size: 1.4em;
+ color: #140096;
+ font-weight: bold;
+}
+
+.ebene2 {
+  font-size: 1.3em;
+  color: lightslategray;
+}
+
+.ebene3 {
+  font-size: 1.2em;
+  color: lightslategray;
+}
